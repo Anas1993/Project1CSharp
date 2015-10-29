@@ -1,0 +1,16 @@
+c:\users\user\documents\visual studio 2013\Projects\Project1CSharp\Project1CSharp\bin\Debug\Project1CSharp.exe.config
+c:\users\user\documents\visual studio 2013\Projects\Project1CSharp\Project1CSharp\bin\Debug\Project1CSharp.exe
+c:\users\user\documents\visual studio 2013\Projects\Project1CSharp\Project1CSharp\bin\Debug\Project1CSharp.pdb
+c:\users\user\documents\visual studio 2013\Projects\Project1CSharp\Project1CSharp\obj\Debug\Project1CSharp.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2013\Projects\Project1CSharp\Project1CSharp\obj\Debug\Project1CSharp.Properties.Resources.resources
+c:\users\user\documents\visual studio 2013\Projects\Project1CSharp\Project1CSharp\obj\Debug\Project1CSharp.csproj.GenerateResource.Cache
+c:\users\user\documents\visual studio 2013\Projects\Project1CSharp\Project1CSharp\obj\Debug\Project1CSharp.exe
+c:\users\user\documents\visual studio 2013\Projects\Project1CSharp\Project1CSharp\obj\Debug\Project1CSharp.pdb
+c:\users\user\documents\visual studio 2013\Projects\Project1CSharp\Project1CSharp\obj\Debug\Project1CSharp.Login.resources
+c:\users\user\documents\visual studio 2013\Projects\Project1CSharp\Project1CSharp\obj\Debug\Project1CSharp.Student.resources
+C:\Users\User\Documents\Visual Studio 2013\Projects\Project1CSharp\Project1CSharp\obj\Debug\Project1CSharp.Forgot_Password.resources
+C:\Users\User\Documents\Visual Studio 2013\Projects\Project1CSharp\Project1CSharp\obj\Debug\Project1CSharp.Admin.resources
+C:\Users\User\Documents\Visual Studio 2013\Projects\Project1CSharp\Project1CSharp\obj\Debug\Project1CSharp.Admin___Instructor.resources
+C:\Users\User\Documents\Visual Studio 2013\Projects\Project1CSharp\Project1CSharp\obj\Debug\Project1CSharp.FirstUserReg.resources
+C:\Users\User\Documents\Visual Studio 2013\Projects\Project1CSharp\Project1CSharp\obj\Debug\Project1CSharp.Admin___Admin.resources
+C:\Users\User\Documents\Visual Studio 2013\Projects\Project1CSharp\Project1CSharp\obj\Debug\Project1CSharp.Admin___Admin___Edit.resources
