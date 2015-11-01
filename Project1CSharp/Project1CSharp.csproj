@@ -122,6 +122,9 @@
     <EmbeddedResource Include="Admin - Admin.resx">
       <DependentUpon>Admin - Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin - Student - Edit.resx">
+      <DependentUpon>Admin - Student - Edit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin - Student.resx">
       <DependentUpon>Admin - Student.cs</DependentUpon>
     </EmbeddedResource>
