@@ -32,11 +32,11 @@ namespace Project1CSharp
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.Text == "ID")
+            if (category.Text == "ID")
             {
                 SqlConnection connection = new SqlConnection(Program.CONNECTIONSTRING);
                 connection.Open();
-                String query = String.Format("Select * From Administrator Where ID = {0}", comboBox2.Text);
+                String query = String.Format("Select * From Administrator Where ID = {0}", multirecord.Text);
                 SqlCommand cmd = new SqlCommand(query, connection);
                 SqlDataReader dr = cmd.ExecuteReader();
 
@@ -44,31 +44,31 @@ namespace Project1CSharp
                 {
                     while (dr.Read())
                     {
-                        textBox1.Text = dr.GetString(1).ToString();
-                        textBox2.Text = dr.GetString(2).ToString();
-                        textBox4.Text = dr.GetString(3).ToString();
-                        textBox11.Text = dr.GetString(4).ToString();
-                        dateTimePicker1.Value = dr.GetDateTime(5);
+                        firstname.Text = dr.GetString(1).ToString();
+                        lastname.Text = dr.GetString(2).ToString();
+                        emailaddress.Text = dr.GetString(3).ToString();
+                        phonenumber.Text = dr.GetString(4).ToString();
+                        dateofbirth.Value = dr.GetDateTime(5);
                         //(textBox10.Text+textBox12.Text+textBox13.Text)
-                        textBox10.Text = dr.GetString(6).ToString();
+                        nic1.Text = dr.GetString(6).ToString();
                         if (dr.GetString(7).ToString() == "Male")
                         {
-                            radioButton1.Select();
+                            male.Select();
 
                         }
                         else
                         {
-                            radioButton2.Select();
+                            female.Select();
                         }
-                        textBox5.Text = dr.GetString(9).ToString();
-                        textBox6.Text = dr.GetString(10).ToString();
-                        textBox7.Text = dr.GetString(11).ToString();
+                        address.Text = dr.GetString(9).ToString();
+                        city.Text = dr.GetString(10).ToString();
+                        country.Text = dr.GetString(11).ToString();
 
                         //textBox10.Text = dr.GetString(6).ToString();
                         string NIC = dr.GetString(6).ToString();
-                        textBox10.Text = NIC.Substring(0, 5);
-                        textBox12.Text = NIC.Substring(5, 7);
-                        textBox13.Text = NIC.Substring(12, 1);
+                        nic1.Text = NIC.Substring(0, 5);
+                        nic2.Text = NIC.Substring(5, 7);
+                        nic3.Text = NIC.Substring(12, 1);
                         //textBox12.Text = NIC.Substring(11, 12);
                         //13 - 5, 7, 1
 
@@ -80,7 +80,7 @@ namespace Project1CSharp
             Console.WriteLine(anotherSubString); 
                          *
                          */
-                        comboBox3.Text = dr.GetString(8).ToString();
+                        bloodgroup.Text = dr.GetString(8).ToString();
 
                     }
                 }
@@ -91,36 +91,36 @@ namespace Project1CSharp
             }
 
 
-            textBox1.Enabled = true;
-            textBox2.Enabled = true;
+            firstname.Enabled = true;
+            lastname.Enabled = true;
             //textBox3.Enabled = true;
-            textBox4.Enabled = true;
-            textBox5.Enabled = true;
-            textBox6.Enabled = true;
-            textBox7.Enabled = true;
+            emailaddress.Enabled = true;
+            address.Enabled = true;
+            city.Enabled = true;
+            country.Enabled = true;
             //textBox9.Enabled = true;
-            textBox10.Enabled = true;
-            textBox11.Enabled = true;
-            textBox12.Enabled = true;
-            textBox13.Enabled = true;
-            dateTimePicker1.Enabled = true;
-            comboBox3.Enabled = true;
+            nic1.Enabled = true;
+            phonenumber.Enabled = true;
+            nic2.Enabled = true;
+            nic3.Enabled = true;
+            dateofbirth.Enabled = true;
+            bloodgroup.Enabled = true;
 
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            textBox14.Enabled = true;
+            searchbox.Enabled = true;
             button3.Enabled = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (comboBox1.Text == "ID")
+            if (category.Text == "ID")
             {
                 SqlConnection connection = new SqlConnection(Program.CONNECTIONSTRING);
                 connection.Open();
-                String query = String.Format("Select ID From Administrator Where ID = {0}", textBox14.Text);
+                String query = String.Format("Select ID From Administrator Where ID = {0}", searchbox.Text);
                 SqlCommand cmd = new SqlCommand(query, connection);
                 SqlDataReader dr = cmd.ExecuteReader();
 
@@ -128,15 +128,15 @@ namespace Project1CSharp
                 {
                     while (dr.Read())
                     {
-                        comboBox2.Items.Add(dr.GetInt32(0));
+                        multirecord.Items.Add(dr.GetInt32(0));
                     }
 
-                    comboBox2.Enabled = true;
+                    multirecord.Enabled = true;
                 }
                 else
                 {
 
-                    comboBox2.Enabled = false;
+                    multirecord.Enabled = false;
                     MessageBox.Show("No record found!");
                 }
             }
@@ -145,10 +145,10 @@ namespace Project1CSharp
 
         private void button4_Click(object sender, EventArgs e)
         {
-            textBox3.Enabled = true;
-            textBox9.Enabled = true;
-            textBox3.Text = "";
-            textBox9.Text = "";
+            password2.Enabled = true;
+            password1.Enabled = true;
+            password2.Text = "";
+            password1.Text = "";
             PASSWORDCHANGECLICKED = true;
 
         }
@@ -157,7 +157,7 @@ namespace Project1CSharp
         {
             SqlConnection connection = new SqlConnection(Program.CONNECTIONSTRING);
             string gender = "";
-            if (radioButton1.Checked)
+            if (male.Checked)
             {
                 gender = "Male";
             }
@@ -175,7 +175,7 @@ namespace Project1CSharp
 SET ContactName='Alfred Schmidt', City='Hamburg'
 WHERE CustomerName='Alfreds Futterkiste';
                  */
-                string queryx = string.Format("UPDATE Login SET ID={0},Password='{1}',UserType='{2}' WHERE ID={0}", comboBox2.Text, textBox9.Text, "Administrator");
+                string queryx = string.Format("UPDATE Login SET ID={0},Password='{1}',UserType='{2}' WHERE ID={0}", multirecord.Text, password1.Text, "Administrator");
                 SqlCommand commandx = new SqlCommand(queryx, connection);
                 commandx.ExecuteNonQuery();
                
@@ -185,7 +185,7 @@ WHERE CustomerName='Alfreds Futterkiste';
             }
             // regular query..
             connection.Open();
-            string query = string.Format("UPDATE Administrator SET ID={0},Administrator_FNAME='{1}',Administrator_LNAME='{2}',Administrator_Email='{3}',Administrator_Phone='{4}',Date_of_Birth='{5}',NIC='{6}',Gender='{7}',Blood_Group='{8}',Home_Address='{9}',Home_City='{10}',Home_County='{11}' WHERE ID={0}", comboBox2.Text, textBox1.Text, textBox2.Text, textBox4.Text, textBox11.Text, dateTimePicker1.Value.Date, (textBox10.Text + textBox12.Text + textBox13.Text), gender, comboBox3.Text, textBox5.Text, textBox6.Text, textBox7.Text);
+            string query = string.Format("UPDATE Administrator SET ID={0},Administrator_FNAME='{1}',Administrator_LNAME='{2}',Administrator_Email='{3}',Administrator_Phone='{4}',Date_of_Birth='{5}',NIC='{6}',Gender='{7}',Blood_Group='{8}',Home_Address='{9}',Home_City='{10}',Home_County='{11}' WHERE ID={0}", multirecord.Text, firstname.Text, lastname.Text, emailaddress.Text, phonenumber.Text, dateofbirth.Value.Date, (nic1.Text + nic2.Text + nic3.Text), gender, bloodgroup.Text, address.Text, city.Text, country.Text);
             SqlCommand command = new SqlCommand(query, connection);
             command.ExecuteNonQuery();
             connection.Close();
