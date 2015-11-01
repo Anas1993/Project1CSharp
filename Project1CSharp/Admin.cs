@@ -106,5 +106,17 @@ namespace Project1CSharp
 
         }
 
+        private void button21_Click(object sender, EventArgs e)
+        {
+            Program.Admin___Department.Show();
+
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            Program.Admin___Department___Edit.Show();
+
+        }
+
     }
 }

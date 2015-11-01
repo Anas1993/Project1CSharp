@@ -84,6 +84,18 @@
     <Compile Include="Admin - Course\Admin - Course.Designer.cs">
       <DependentUpon>Admin - Course.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin - Department\Admin - Department - Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin - Department\Admin - Department - Edit.Designer.cs">
+      <DependentUpon>Admin - Department - Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin - Department\Admin - Department.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin - Department\Admin - Department.Designer.cs">
+      <DependentUpon>Admin - Department.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin - Student\Admin - Student - Edit.cs">
       <SubType>Form</SubType>
     </Compile>

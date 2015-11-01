@@ -18,7 +18,9 @@ namespace Project1CSharp
         public static Admin___Student Admin___Student = new Admin___Student();
         public static Admin___Student___Edit Admin___Student___Edit = new Admin___Student___Edit();
         public static Admin___Course Admin___Course = new Admin___Course();
-        public static Admin___Course___Edit Admin___Course___Edit = new Admin___Course___Edit(); 
+        public static Admin___Course___Edit Admin___Course___Edit = new Admin___Course___Edit();
+        public static Admin___Department.Admin___Department Admin___Department = new Admin___Department.Admin___Department();
+        public static Admin___Department.Admin___Department___Edit Admin___Department___Edit = new Admin___Department.Admin___Department___Edit();
 
         private static string connectionString;
         private static int id;
