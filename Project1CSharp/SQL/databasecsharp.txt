@@ -1,3 +1,12 @@
+drop table Student_Course;
+drop table Course;
+drop table Head;
+drop table Instructor;
+drop table Administrator;
+drop table Department;
+drop table Student;
+drop table Login;
+
 create table Login(
 	ID int not null,
 	Primary key (ID),
@@ -81,12 +90,11 @@ create table Head(
 create table Course(
 	Course_ID int not null,
 	Primary key (Course_ID),
-	
 	Course_NAME varchar(75) not null,
 	Course_Hours int not null,
 	ID int not null Foreign key REFERENCES Instructor(ID),
+	/*Department_ID int not null Foreign key REFERENCES Department(Department_ID),*/
 	Course_Description varchar(500) null,
-	
 );
 
 create table Student_Course(

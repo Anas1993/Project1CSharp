@@ -60,35 +60,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin - Admin - Edit.cs">
+    <Compile Include="Admin - Admin\Admin - Admin - Edit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin - Admin - Edit.Designer.cs">
+    <Compile Include="Admin - Admin\Admin - Admin - Edit.Designer.cs">
       <DependentUpon>Admin - Admin - Edit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin - Admin.cs">
+    <Compile Include="Admin - Admin\Admin - Admin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin - Admin.Designer.cs">
+    <Compile Include="Admin - Admin\Admin - Admin.Designer.cs">
       <DependentUpon>Admin - Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin - Student - Edit.cs">
+    <Compile Include="Admin - Course\Admin - Course - Edit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin - Student - Edit.Designer.cs">
+    <Compile Include="Admin - Course\Admin - Course - Edit.Designer.cs">
+      <DependentUpon>Admin - Course - Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin - Course\Admin - Course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin - Course\Admin - Course.Designer.cs">
+      <DependentUpon>Admin - Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin - Student\Admin - Student - Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin - Student\Admin - Student - Edit.Designer.cs">
       <DependentUpon>Admin - Student - Edit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin - Student.cs">
+    <Compile Include="Admin - Student\Admin - Student.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin - Student.Designer.cs">
+    <Compile Include="Admin - Student\Admin - Student.Designer.cs">
       <DependentUpon>Admin - Student.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FirstUserReg.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FirstUserReg.Designer.cs">
-      <DependentUpon>FirstUserReg.cs</DependentUpon>
     </Compile>
     <Compile Include="Forgot_Password.cs">
       <SubType>Form</SubType>
@@ -116,20 +122,20 @@
     <Compile Include="Student.Designer.cs">
       <DependentUpon>Student.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Admin - Admin - Edit.resx">
+    <EmbeddedResource Include="Admin - Admin\Admin - Admin - Edit.resx">
       <DependentUpon>Admin - Admin - Edit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin - Admin.resx">
+    <EmbeddedResource Include="Admin - Admin\Admin - Admin.resx">
       <DependentUpon>Admin - Admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin - Student - Edit.resx">
+    <EmbeddedResource Include="Admin - Course\Admin - Course.resx">
+      <DependentUpon>Admin - Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin - Student\Admin - Student - Edit.resx">
       <DependentUpon>Admin - Student - Edit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin - Student.resx">
+    <EmbeddedResource Include="Admin - Student\Admin - Student.resx">
       <DependentUpon>Admin - Student.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FirstUserReg.resx">
-      <DependentUpon>FirstUserReg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forgot_Password.resx">
       <DependentUpon>Forgot_Password.cs</DependentUpon>

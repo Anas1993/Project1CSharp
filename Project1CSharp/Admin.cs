@@ -88,5 +88,22 @@ namespace Project1CSharp
 
         }
 
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Program.Admin___Student___Edit.Show();
+
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            Program.Admin___Course.Show();
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
