@@ -12,10 +12,11 @@ namespace Project1CSharp
         public static Login Login = new Login();
         public static FirstUserReg FirstUserReg = new FirstUserReg();
         public static Admin Admin = new Admin();
-        public static Admin___Instructor Admin___Instructor = new Admin___Instructor();
+        //public static Admin___Instructor Admin___Instructor = new Admin___Instructor();
         public static Admin___Admin Admin___Admin = new Admin___Admin();
         public static Admin___Admin___Edit Admin___Admin___Edit = new Admin___Admin___Edit();
-
+        public static Admin___Student Admin___Student = new Admin___Student();
+ 
 
         private static string connectionString;
         private static int id;

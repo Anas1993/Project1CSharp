@@ -22,17 +22,9 @@ namespace Project1CSharp
 
         private void Admin___Admin_Load(object sender, EventArgs e)
         {
+            Program.GetEndID();
             textBox8.Text = Program.ID.ToString();
-            if (Program.ID > 1)
-            {
-                this.button2.Text = "Back";
-
-            }
-            else
-            {
-                this.button2.Text = "Exit";
-
-            }
+           
         }
 
         private void button1_Click(object sender, EventArgs e)

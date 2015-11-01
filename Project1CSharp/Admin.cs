@@ -40,7 +40,7 @@ namespace Project1CSharp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Program.Admin___Instructor.Show();
+            //Program.Admin___Instructor.Show();
 
         }
 
@@ -79,6 +79,12 @@ namespace Project1CSharp
         private void button8_Click(object sender, EventArgs e)
         {
             Program.Admin___Admin___Edit.Show();
+
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            Program.Admin___Student.Show();
 
         }
 

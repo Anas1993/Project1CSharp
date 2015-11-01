@@ -1,0 +1,96 @@
+create table Login(
+	ID int not null,
+	Primary key (ID),
+	Password varchar(255) not null,
+	UserType varchar(75) not null,
+);
+
+create table Student(
+	ID int not null Foreign Key REFERENCES Login(ID),
+	Primary key (ID),
+	Student_FNAME varchar(75) not null,
+	Student_LNAME varchar(75) not null,
+	
+	Student_Email varchar(75) null,
+	Student_Phone varchar(75) null,
+	
+	Date_of_Birth date not null,
+	NIC varchar(50) not null,
+	Gender varchar(20) not null,
+	
+	Blood_Group varchar(5) null,
+	
+	Fathers_Name varchar(75) not null,
+	Fathers_Phone_Number varchar(75) not null,
+	Home_Address varchar(100) not null,
+	Home_City varchar(100) not null,
+	Home_County varchar(100) not null,
+);
+
+create table Department(
+	Department_ID int not null,
+	Primary key (Department_ID),
+	Department_NAME varchar(75) not null,
+);
+
+create table Administrator(
+	ID int not null Foreign Key REFERENCES Login(ID),
+	Primary key (ID),
+	Administrator_FNAME varchar(75) not null,
+	Administrator_LNAME varchar(75) not null,
+	
+	Administrator_Email varchar(75) not null,
+	Administrator_Phone varchar(75) not null,
+	Date_of_Birth date not null,
+	NIC varchar(50) not null,
+	Gender varchar(20) not null,
+	
+	Blood_Group varchar(5) null,
+	
+	Home_Address varchar(100) not null,
+	Home_City varchar(100) not null,
+	Home_County varchar(100) not null,
+);
+
+create table Instructor(
+	ID int not null Foreign Key REFERENCES Login(ID),
+	Primary key (ID),
+	Instructor_FNAME varchar(75) not null,
+	Instructor_LNAME varchar(75) not null,
+	
+	Instructor_Email varchar(75) not null,
+	Instructor_Phone varchar(75) not null,
+	Department_ID int not null Foreign key REFERENCES Department(Department_ID),
+	Date_of_Birth date not null,
+	NIC varchar(50) not null,
+	Gender varchar(20) not null,
+	
+	Blood_Group varchar(5) null,
+	
+	Home_Address varchar(100) not null,
+	Home_City varchar(100) not null,
+	Home_County varchar(100) not null,
+);
+
+create table Head(
+	Department_ID int not null Foreign key REFERENCES Department(Department_ID),
+	Primary key (Department_ID),
+	ID int not null Foreign key REFERENCES Instructor(ID),
+);
+	
+create table Course(
+	Course_ID int not null,
+	Primary key (Course_ID),
+	
+	Course_NAME varchar(75) not null,
+	Course_Hours int not null,
+	ID int not null Foreign key REFERENCES Instructor(ID),
+	Course_Description varchar(500) null,
+	
+);
+
+create table Student_Course(
+	ID int not null Foreign key REFERENCES Student(ID),
+	Course_ID int not null Foreign key REFERENCES Course(Course_ID),
+	Primary key (ID, Course_ID),
+);
