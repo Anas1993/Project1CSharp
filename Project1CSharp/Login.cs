@@ -22,6 +22,10 @@ namespace Project1CSharp
 
         private void Login_Load(object sender, EventArgs e)
         {
+
+            //MDIParent1 MDIParent1 = new MDIParent1();
+            //MDIParent1.Show();
+
             if (Program.ID == 1)
             {
                 MessageBox.Show("No user found in the database! Click Ok to create an admin account..");
